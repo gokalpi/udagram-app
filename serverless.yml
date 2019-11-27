@@ -72,6 +72,9 @@ custom:
 
 functions:
 
+  Auth:
+    handler: src/lambda/auth/auth0Authorizer.handler
+
   GetGroups:
     handler: src/lambda/http/getGroups.handler
     events:
@@ -87,6 +90,7 @@ functions:
           method: post
           path: groups
           cors: true
+          auth0Authorizer: Auth
           reqValidatorName: RequestBodyValidator
           documentation:
             summary: Create a new group
@@ -109,6 +113,7 @@ functions:
           method: post
           path: groups/{groupId}/images
           cors: true
+          auth0Authorizer: Auth
           reqValidatorName: RequestBodyValidator
           documentation:
             summary: Create a new image
