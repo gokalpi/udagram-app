@@ -1,7 +1,7 @@
 import { CustomAuthorizerEvent, CustomAuthorizerResult } from 'aws-lambda'
 import 'source-map-support/register'
 
-export const handler = async (event: CustomAuthorizerEvent, context): Promise<CustomAuthorizerResult> => {
+export const handler = async (event: CustomAuthorizerEvent): Promise<CustomAuthorizerResult> => {
   try {
     verifyToken(event.authorizationToken)
     console.log('User was authorized')
@@ -36,7 +36,7 @@ export const handler = async (event: CustomAuthorizerEvent, context): Promise<Cu
       }
     }
   }
-})
+}
 
 function verifyToken(authHeader: string) {
   if (!authHeader)
