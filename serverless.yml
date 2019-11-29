@@ -21,6 +21,7 @@ provider:
     IMAGES_S3_BUCKET: serverless-udagram-gokalpi-images-${self:provider.stage}
     SIGNED_URL_EXPIRATION: 300
     THUMBNAILS_S3_BUCKET: serverless-udagram-gokalpi-thumbnail-${self:provider.stage}
+    AUTH_0_SECRET: uztJMyhoj9q0sc_GNwXPrup9MWYCIlMWULL4xbC9ML8aol9ykqCHIs26errnEINA
 
   iamRoleStatements:
     - Effect: Allow
