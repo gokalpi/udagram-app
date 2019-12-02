@@ -11,12 +11,14 @@
     "http-aws-es": "^6.0.0",
     "jimp": "^0.6.4",
     "jsonwebtoken": "^8.5.1",
+    "middy": "^0.30.5",
     "source-map-support": "^0.5.11",
     "uuid": "^3.3.2"
   },
   "devDependencies": {
     "@types/aws-lambda": "^8.10.28",
     "@types/elasticsearch": "^5.0.34",
+    "@types/jsonwebtoken": "^8.3.2",
     "@types/node": "^10.14.12",
     "aws-sdk": "^2.492.0",
     "serverless-aws-documentation": "^1.1.0",
