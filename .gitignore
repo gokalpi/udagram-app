@@ -12,6 +12,7 @@ log.txt
 .vscode/
 npm-debug.log*
 
+.dynamodb/
 .env
 .idea/
 .ionic/
@@ -21,6 +22,7 @@ npm-debug.log*
 .tmp/
 .versions/
 .vscode/
+.webpack/
 coverage/
 www/
 node_modules/
