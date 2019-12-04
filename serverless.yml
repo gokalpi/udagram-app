@@ -6,6 +6,7 @@ plugins:
   - serverless-reqvalidator-plugin
   - serverless-aws-documentation
   - serverless-plugin-canary-deployments
+  - serverless-iam-roles-per-function
   - serverless-dynamodb-local
   - serverless-offline
 
@@ -15,6 +16,10 @@ provider:
 
   stage: ${opt:stage, 'dev'}
   region: ${opt:region, 'eu-central-1'}
+
+  tracing:
+    lambda: true
+    apiGateway: true
 
   environment:
     GROUPS_TABLE: Groups-${self:provider.stage}
